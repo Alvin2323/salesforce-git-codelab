@@ -6,6 +6,7 @@ export default class SfdcstopTeam extends LightningElement {
     contributors = [];
     
     //Wire function is used to make apex call to bring data to client side
+    //This is wire as function implementation
     @wire(getContributors)
     contributorResponse({ error, data }) {
         if(data) {
