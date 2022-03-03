@@ -4,7 +4,8 @@ import getContributors from '@salesforce/apex/SFDCStopTeamController.getContribu
 export default class SfdcstopTeam extends LightningElement {
 
     contributors = [];
-
+    
+    //Wire function is used to make apex call to bring data to client side
     @wire(getContributors)
     contributorResponse({ error, data }) {
         if(data) {
